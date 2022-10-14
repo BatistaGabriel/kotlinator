@@ -1,29 +1,26 @@
 name: Test coverage
 
 on:
-  push: null
-  pull_request: null
+  push:
+    branches:
+      - 'main'
+    tags-ignore:
+      - '**'
 
 jobs:
 
   collect_coverage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
           java-version: 11
-          distribution: temurin
       - name: Grant execute permission for gradlew
         shell: bash
         run: chmod +x gradlew
-      - uses: stevenleadbeater/kotlin-kover-action@v1.0.0
-        id: kover-tests
-        with:
-          coverage-threshold: 80
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          proxy-url: https://add-pr-comment-proxy-94idvmwyie-uc.a.run.app
-      - name: Check coverage
-        if: ${{(steps.kover-tests.outputs.line-coverage) < 80}}
+      - name: Get coverage
         shell: bash
-        run: exit "Line coverage expected to be > 80 but was ${{steps.kover-tests.outputs.line-coverage}}"
+        run: ./gradlew koverReport
+      - name: Parse coverage
+        id: parse_coverage
+        uses: stevenleadbeater/kover-report-parser-action@0.0.1
