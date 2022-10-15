@@ -12,4 +12,14 @@ fun main() {
     Understanding how multiple line
     comments works
      */
+
+    /**
+     * Mutable variable example -- var
+     */
+    var name = "Jhon"
+
+    /**
+     * Immutable variable example -- val
+     */
+    val lastName = "Doe"
 }
