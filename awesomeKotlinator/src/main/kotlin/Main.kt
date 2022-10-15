@@ -22,4 +22,10 @@ fun main() {
      * Immutable variable example -- val
      */
     val lastName = "Doe"
+
+    /**
+     * string interpolation
+     */
+    println("Hello, $name $lastName")
+    println("Double: ${Double.MAX_VALUE}")
 }
