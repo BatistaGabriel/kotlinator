@@ -1,7 +1,6 @@
 name: ktlint
 
 on:
-  push: null
   pull_request:
     paths:
       - .github/workflows/ktlint.yml
