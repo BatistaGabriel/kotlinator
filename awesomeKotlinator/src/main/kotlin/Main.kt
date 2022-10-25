@@ -28,4 +28,27 @@ fun main() {
      */
     println("Hello, $name $lastName")
     println("Double: ${Double.MAX_VALUE}")
+
+    helloWorld()
+    println(sum(1, 2))
+}
+
+/**
+ * Understanding Functions in Kotlin
+ */
+
+/**
+ * This function has no return, which is the same as
+ * the return type Unit
+ */
+fun helloWorld() {
+    println("Hello World.")
+}
+
+/**
+ * This function has a return of the sum of two params
+ * of the type Int, so the function type is Int
+ */
+fun sum(a: Int, b: Int): Int {
+    return a + b
 }
