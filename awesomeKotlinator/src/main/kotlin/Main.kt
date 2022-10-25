@@ -30,7 +30,9 @@ fun main() {
     println("Double: ${Double.MAX_VALUE}")
 
     helloWorld()
+    helloWorldOneliner()
     println(sum(1, 2))
+    println(sumOneliner(1, 2))
 }
 
 /**
@@ -52,3 +54,10 @@ fun helloWorld() {
 fun sum(a: Int, b: Int): Int {
     return a + b
 }
+
+/**
+ * This is a single line function, or commonly called oneliner function
+ */
+fun sumOneliner(a: Int, b: Int) = (a + b)
+
+fun helloWorldOneliner() = println("Hello World.")
