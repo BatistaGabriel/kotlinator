@@ -37,10 +37,13 @@ fun main() {
     println(sumOneliner(1, 2))
 
     stringler()
-
     mathematicnator()
 
     theMightyIf()
+    theMightyIfElse(15)
+    theMightyIfElse(19)
+    println(greetingsWarior(true))
+    println(greetingsWarior(false))
 }
 
 /**
@@ -121,4 +124,27 @@ fun theMightyIf() {
     if (num > 20) {
         println("The the condition num > 20 is: ${num > 20}")
     }
+}
+
+/**
+ * The logical exclusion based in boolean conditions
+ * comparing a true and a false scenario
+ * AKA if else
+ */
+fun theMightyIfElse(number: Int) {
+    if (number > 18) {
+        println("The the condition number > 18 using the value number = $number is: ${number > 18}")
+    } else {
+        println("The the condition number > 18 using the value number = $number is: ${number > 18}")
+    }
+}
+
+/**
+ * Using the if to directly return a content to
+ * the caller of the function
+ */
+fun greetingsWarior(day: Boolean) = if (day) {
+    "Morning!"
+} else {
+    "Evening!"
 }
