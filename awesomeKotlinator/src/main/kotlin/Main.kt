@@ -1,3 +1,5 @@
+import kotlin.math.*
+
 /**
  * This comment works as a documentation comment
  * this will appear once you hover the mouse over
@@ -35,6 +37,8 @@ fun main() {
     println(sumOneliner(1, 2))
 
     stringler()
+
+    mathematicnator()
 }
 
 /**
@@ -87,4 +91,17 @@ fun stringler() {
     print("The string as lower case is: ${myString.lowercase()}")
     print("\nThe string as upper case is: ${myString.uppercase()}")
     print("\nThe trimmed string is: ${"                      with spaces at the start $myString".trim()}")
+}
+
+/**
+ * This function will be used to deep dive into math operations
+ * in kotlin
+ */
+fun mathematicnator() {
+    println("\nThe max value between 5 and 10 is: ${max(5, 10)}")
+    println("The min value between 5 and 10 is: ${min(5, 10)}")
+    println("The square root of 45.67 is: ${sqrt(45.67f)}")
+    println("The value of PI is: $PI")
+    println("The value of E is: $E")
+    println("The round value of 21344.897045239078585 is: ${round(21344.897045239078585)}")
 }
