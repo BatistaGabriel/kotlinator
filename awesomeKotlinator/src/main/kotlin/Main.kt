@@ -39,6 +39,8 @@ fun main() {
     stringler()
 
     mathematicnator()
+
+    theMightyIf()
 }
 
 /**
@@ -104,4 +106,19 @@ fun mathematicnator() {
     println("The value of PI is: $PI")
     println("The value of E is: $E")
     println("The round value of 21344.897045239078585 is: ${round(21344.897045239078585)}")
+}
+
+/**
+ * Understanding Logical Operators in Kotlin
+ */
+
+/**
+ * The logical exclusion based in boolean conditions
+ * AKA if
+ */
+fun theMightyIf() {
+    val num = 30
+    if (num > 20) {
+        println("The the condition num > 20 is: ${num > 20}")
+    }
 }
