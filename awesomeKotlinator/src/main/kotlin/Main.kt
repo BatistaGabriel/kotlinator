@@ -42,8 +42,10 @@ fun main() {
     theMightyIf()
     theMightyIfElse(15)
     theMightyIfElse(19)
-    println(greetingsWarior(true))
-    println(greetingsWarior(false))
+    println(greetingsWarrior(true))
+    println(greetingsWarrior(false))
+    println(theMightyWhen("Hello There"))
+    println(theMightyWhen("Hi"))
 }
 
 /**
@@ -143,8 +145,18 @@ fun theMightyIfElse(number: Int) {
  * Using the if to directly return a content to
  * the caller of the function
  */
-fun greetingsWarior(day: Boolean) = if (day) {
+fun greetingsWarrior(day: Boolean) = if (day) {
     "Morning!"
 } else {
     "Evening!"
+}
+
+/**
+ * Using the when operator when, looks like a switch case
+ */
+fun theMightyWhen(text: String): String {
+    return when (text) {
+        "Hello There" -> "General Kenobi"
+        else -> "You Rebel Scum"
+    }
 }
