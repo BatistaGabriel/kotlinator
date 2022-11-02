@@ -47,6 +47,7 @@ fun main() {
     println(theMightyWhen("Hello There"))
     println(theMightyWhen("Hi"))
     theMysticalElvis()
+    theHolyLet()
 }
 
 /**
@@ -177,6 +178,19 @@ fun theMightyWhen(text: String): String {
  *  there is no ternary operators in kotlin
  */
 fun theMysticalElvis() {
-    var s: String? = null
+    val s: String? = null
     println(s ?: "null")
+}
+
+/**
+ * How the let operator works, also known as scope function
+ * which is related to the variable used to call
+ * the let operator, inside of the let operator the variable
+ * is accessible by using the keyword **it**
+ */
+fun theHolyLet() {
+    val s: String? = null
+    s?.let {
+        println("The content of the string is $it")
+    }
 }
