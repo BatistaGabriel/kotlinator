@@ -46,6 +46,7 @@ fun main() {
     println(greetingsWarrior(false))
     println(theMightyWhen("Hello There"))
     println(theMightyWhen("Hi"))
+    theMysticalElvis()
 }
 
 /**
@@ -159,4 +160,23 @@ fun theMightyWhen(text: String): String {
         "Hello There" -> "General Kenobi"
         else -> "You Rebel Scum"
     }
+}
+
+/**
+ * Understanding Null Handling in Kotlin
+ */
+
+/**
+ * How the elvis operator works, looks like a ternary
+ * condition ? statement 1 : statement 2
+ *
+ * trivia:
+ *  the operator has this name because ?: looks
+ *  like elvis hairstyle
+ *
+ *  there is no ternary operators in kotlin
+ */
+fun theMysticalElvis() {
+    var s: String? = null
+    println(s ?: "null")
 }
