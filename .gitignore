@@ -24,3 +24,35 @@ hs_err_pid*
 
 # adding the .idea folder to the ignore list
 */.idea/*
+
+# adding gradle folder to the exclude list
+*/.gradle/*
+ultimateUnitTester/.gradle/
+/ultimateUnitTester/.gradle/*
+
+# adding the build folder to the exclude list
+*/build/*
+/ultimateUnitTester/build/
+/ultimateUnitTester/build/*
+
+# adding specific file extensions to the exclude list
+*.bin
+*.lock
+*.probe
+
+*/*.bin
+*/*.lock
+*/*.probe
+
+*/*/*.bin
+*/*/*.lock
+*/*/*.probe
+
+*/*/*/*.bin
+*/*/*/*.lock
+*/*/*/*.probe
+
+/ultimateUnitTester/.gradle/
+/ultimateUnitTester/.idea/
+/awesomeKotlinator/out/
+/awesomeKotlinator/.idea/
