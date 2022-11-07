@@ -48,6 +48,8 @@ fun main() {
     println(theMightyWhen("Hi"))
     theMysticalElvis()
     theHolyLet()
+
+    println(theMightyGenerics(10f, 8f, 2, "", false))
 }
 
 /**
@@ -193,4 +195,27 @@ fun theHolyLet() {
     s?.let {
         println("The content of the string is $it")
     }
+}
+
+/**
+ * Understanding Generics in Kotlin
+ */
+
+/**
+ * This will show how do Generics works on kotlin, by generics
+ * you must have in mind that on compilation time the function
+ * will not know the parameter type
+ *
+ * note: the vararg type can handle multiple entries, but for
+ * convention it must be the last type os arguments on your function
+ */
+fun <T> theMightyGenerics(vararg grades: T): Float {
+    var sum = 0f
+    for (n in grades) {
+        if (n is Float) {
+            sum += n
+        }
+    }
+
+    return (sum / grades.size)
 }
