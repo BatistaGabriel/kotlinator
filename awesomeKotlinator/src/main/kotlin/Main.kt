@@ -50,6 +50,8 @@ fun main() {
     theHolyLet()
 
     println(theMightyGenerics(10f, 8f, 2, "", false))
+
+    println(theGoodOldAny(1))
 }
 
 /**
@@ -218,4 +220,32 @@ fun <T> theMightyGenerics(vararg grades: T): Float {
     }
 
     return (sum / grades.size)
+}
+
+/**
+ * Understanding Kotlin Specific Types
+ */
+
+/**
+ * This will show how to work with the type Any
+ */
+fun theGoodOldAny(value: Any): String {
+    return "The informed value is $value"
+}
+
+/**
+ * This type is used to indicate that the
+ * function does not have a return, like the
+ * void concept
+ */
+fun theLuxuriousUnit(value: Int): Unit {
+    // Content
+}
+
+/**
+ * This is more commonly used when it is necessary
+ * to return an exception from the function
+ */
+fun theOutrageousNothing(value: Int): Nothing {
+    throw NotImplementedError()
 }
