@@ -1,23 +1,25 @@
-fun countXO(str: String): Boolean {
-    val strLowered = str.lowercase()
-
-    var i = 0
-    var countX = 0
-    var countO = 0
-
-    while (i < strLowered.length) {
-        if (strLowered[i] == 'x') {
-            countX++
-        } else if (strLowered[i] == 'o') {
-            countO++
-        }
-        i++
+fun ticketValidator(age: Int, type: String, code: String): String {
+    if (age < 18) {
+        return "Not Allowed!"
     }
-    return countO == countX && countO != 0
-}
 
-fun main() {
-    println(countXO("xxoo"))
-    println(countXO("xxooo"))
-    println(countXO("aa"))
+    if (type != "") {
+        val ticketType = type.lowercase()
+        if (ticketType != "standard" && ticketType != "premium" && ticketType != "deluxe") {
+            return "Not Allowed!"
+        }
+
+        if (code != "") {
+            val ticketCode = code.lowercase()
+            return if (ticketType == "standard" && ticketCode.startsWith("xt")) {
+                "Welcome!"
+            } else if ((ticketType == "premium" || ticketType == "deluxe") && ticketCode.startsWith("xl")) {
+                "Welcome!"
+            } else {
+                "Not Allowed!"
+            }
+        }
+    }
+
+    return "Not Allowed!"
 }
