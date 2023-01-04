@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TheMostAwesomeTripCostApp</string>
+    <string name="distanceHintText">Distance</string>
+    <string name="distanceFieldLabelText">Total Amount of Kilometers</string>
+    <string name="priceHintText">Price</string>
+    <string name="priceFieldLabelText">Price per Liter</string>
+    <string name="autonomyHintText">Autonomy</string>
+    <string name="autonomyFieldLabelText">KMs per Liter</string>
+    <string name="totalCostLabelText">Total Cost of the Trip:</string>
+    <string name="totalCostText">R$ 0</string>
+    <string name="btnCalculateText">Calculate</string>
 </resources>
